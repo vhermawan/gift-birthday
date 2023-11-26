@@ -1,6 +1,5 @@
 export function Ballon(){
-    const density = 7; // concurrent balloon count
-    const balloons = []; 
+    const density = 10; // concurrent balloon count
     const colors = ['yellow', 'green', 'blue', 'red'];
     const stringElement = document.createElement("div");
     stringElement.classList.add("string");
@@ -76,7 +75,7 @@ export function Ballon(){
             transform: `rotateZ(45deg) translate(-100vw, -100vh)`
         });
 
-        const balloonAnimation = balloon.animate(sequence, {
+       balloon.animate(sequence, {
             duration: 8000,
             delay: delay
         });
