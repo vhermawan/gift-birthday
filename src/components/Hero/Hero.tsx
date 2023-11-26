@@ -3,7 +3,7 @@ const Hero = () => {
     <section id="hero" className="mt-[60px] md:mt-[50px] font-jakarta p-4">
       <div className="flex flex-col gap-y-3 md:gap-y-7 md:items-center">
         <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-30"
           aria-hidden="true"
         >
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#ee57ff] opacity-30 sm:left-[calc(50%-30rem)]"></div>

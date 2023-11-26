@@ -1,5 +1,6 @@
 import { LIST_MENU } from "@/common/constant";
 import { List, Moon, Sun } from "@phosphor-icons/react"
+import clsx from "clsx";
 import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-scroll";
 
@@ -7,6 +8,8 @@ const Header = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
+
+  const [isScroll, setIsScroll] = useState(false);
 
   const handleToggle = (e:any) => {
     if (e.target.checked) {
@@ -16,6 +19,20 @@ const Header = () => {
     }
   };
 
+  const changeBackground = () => {
+    console.log(window.scrollY)
+    if (window.scrollY >= 66) {
+      setIsScroll(true)
+    } else {
+      setIsScroll(false)
+    }
+  }
+
+  useEffect(() => {
+    changeBackground()
+    window.addEventListener("scroll", changeBackground)
+  })
+
    useEffect(() => {
     localStorage.setItem("theme", theme || 'light');
     const localTheme = localStorage.getItem("theme");
@@ -23,7 +40,10 @@ const Header = () => {
   }, [theme]);
 
   return (
-    <nav className="navbar bg-transparent px-4 md:px-6 font-jakarta">
+    <nav className={clsx("navbar sticky top-0 px-4 md:px-6 font-jakarta", {
+      'bg-transparent': !isScroll,
+      'bg-white dark:bg-base-100': isScroll
+    })}>
       <div className="navbar-start">
         <h1 className="text-xl font-semibold">Tenten 🫶🏼</h1>
       </div>
