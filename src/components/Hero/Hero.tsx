@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="mt-[100px] md:mt-[50px]font-jakarta p-4">
+    <section id="hero" className="mt-[100px] md:mt-[50px]font-jakarta p-4">
       <div className="flex flex-col gap-y-2 md:gap-y-7 md:text-center md:items-center">
         <div className="badge badge-[#3fa8e0] badge-outline">10 December 2023</div>
         <h1 className="font-normal text-[#a6abad] text-2xl md:text-5xl">
