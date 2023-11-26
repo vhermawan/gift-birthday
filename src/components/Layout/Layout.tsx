@@ -12,7 +12,7 @@ const Layout = ({children}: React.PropsWithChildren) => {
   return (
     <>
       <Header />
-      <section id="content" className="h-screen">
+      <section id="content" className="min-h-screen">
         {children}
       </section>
       <Footer />

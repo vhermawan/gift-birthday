@@ -1,5 +1,5 @@
 export function Ballon(){
-    const density = 10; // concurrent balloon count
+    const density = 7; // concurrent balloon count
     const colors = ['yellow', 'green', 'blue', 'red'];
     const stringElement = document.createElement("div");
     stringElement.classList.add("string");

@@ -13,6 +13,7 @@
   position: fixed;
   bottom: calc(-1 * var(--balloonDimension));
   left: 0;
+  border: 1px black solid;
   background-color: aqua;
 }
 .balloon::before {

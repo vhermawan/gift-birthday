@@ -1,5 +1,7 @@
+import { LIST_MENU } from "@/common/constant";
 import { List, Moon, Sun } from "@phosphor-icons/react"
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [theme, setTheme] = useState(
@@ -21,17 +23,26 @@ const Header = () => {
   }, [theme]);
 
   return (
-    <nav className="navbar bg-base-100 px-4 md:px-6 font-jakarta">
+    <nav className="navbar bg-transparent px-4 md:px-6 font-jakarta">
       <div className="navbar-start">
         <h1 className="text-xl font-semibold">Tenten 🫶🏼</h1>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><a>Prolog</a></li>
-          <li><a>Moments</a></li>
-          <li><a>Wish</a></li>
-          <li><a>Songs</a></li>
-          <li><a>Epilogue</a></li>
+          {LIST_MENU.map((menu) => {
+            return (
+              <Fragment key={menu.id}>
+                <Link 
+                  to={menu.id}
+                  spy={true} 
+                  smooth={true} 
+                  className="px-3 cursor-pointer"
+                >
+                  {menu.menu}
+                </Link>
+              </Fragment>
+            )
+          })}
         </ul>
       </div>
       <div className="navbar-end">
@@ -39,16 +50,21 @@ const Header = () => {
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <List size={32}/>
           </label>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a>Item 1</a></li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </li>
-            <li><a>Item 3</a></li>
+          <ul tabIndex={0} className="menu menu-sm dropdown-content py-3 gap-y-2 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            {LIST_MENU.map((menu) => {
+              return (
+                <Fragment key={menu.id}>
+                  <Link 
+                    to={menu.id}
+                    spy={true} 
+                    smooth={true} 
+                    className="px-3 cursor-pointer"
+                  >
+                    {menu.menu}
+                  </Link>
+                </Fragment>
+              )
+            })}
           </ul>
         </div>
 
