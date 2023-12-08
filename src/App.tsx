@@ -1,3 +1,4 @@
+import { Epilogue } from './components/Epilogue/Epilogue'
 import { Hero } from './components/Hero/Hero'
 import { Layout } from './components/Layout/Layout'
 import { Moments } from './components/Moments/Moments'
@@ -13,6 +14,7 @@ function App() {
       <WordingQuote />
       <Moments />
       <WishList />
+      <Epilogue />
     </Layout>
   )
 }

@@ -22,7 +22,6 @@ const Hero = () => {
           hopefully in the future we will always be together and become more mature to face existing problems. 
           Once again happy birthday, I love you.
         </h3>
-        <button className="btn btn-outline bg-transparent">Create Your Wish</button>
 
         <div
           className="absolute inset-x-0 top-[calc(100%-20rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-22rem)]"
