@@ -7,7 +7,7 @@ import SertaMulia from "@/assets/songs/Sal-Priadi-Serta-Mulia-Official.mp3"
 
 const Layout = ({children}: React.PropsWithChildren) => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
    const togglePlayPause = () => {
       const audio = audioRef.current;
@@ -22,13 +22,12 @@ const Layout = ({children}: React.PropsWithChildren) => {
   };
 
   useEffect(()=> {
-    audioRef.current?.play();
     Ballon();
   },[])
 
   return (
     <>
-      <audio ref={audioRef} src={SertaMulia} autoPlay />
+      <audio ref={audioRef} src={SertaMulia} />
       <Header />
       <section id="content" className="min-h-screen">
         {children}
