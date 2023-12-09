@@ -22,6 +22,7 @@ const Layout = ({children}: React.PropsWithChildren) => {
   };
 
   useEffect(()=> {
+    audioRef.current?.play();
     Ballon();
   },[])
 
