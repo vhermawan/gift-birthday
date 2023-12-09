@@ -31,46 +31,46 @@ const Epilogue = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
           <div className="grid gap-4">
               <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={SbyImage} alt="" />
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={SbyImage} alt="" />
+              </div>
+              <div className="h-full">
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={DateImage} alt="" />
               </div>
               <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={DateImage} alt="" />
-              </div>
-              <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={DateMultipleImage} alt="" />
-              </div>
-          </div>
-          <div className="grid gap-4">
-              <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={MarugameImage} alt="" />
-              </div>
-              <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={FirstMetImage} alt="" />
-              </div>
-              <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={StudioImage} alt="" />
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={DateMultipleImage} alt="" />
               </div>
           </div>
           <div className="grid gap-4">
               <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={TamansariImage} alt="" />
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={MarugameImage} alt="" />
               </div>
               <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={BonbinImage} alt="" />
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={FirstMetImage} alt="" />
               </div>
               <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={TamanImage} alt="" />
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={StudioImage} alt="" />
               </div>
           </div>
           <div className="grid gap-4">
               <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={TimezoneImage} alt="" />
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={TamansariImage} alt="" />
               </div>
               <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={KaliurangImage} alt="" />
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={BonbinImage} alt="" />
               </div>
               <div>
-                  <img className="h-full object-cover max-w-full rounded-lg" src={LastsImage} alt="" />
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={TamanImage} alt="" />
+              </div>
+          </div>
+          <div className="grid gap-4">
+              <div>
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={TimezoneImage} alt="" />
+              </div>
+              <div>
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={KaliurangImage} alt="" />
+              </div>
+              <div>
+                  <img className="h-auto md:h-full object-cover max-w-full rounded-lg" src={LastsImage} alt="" />
               </div>
           </div>
       </div>
